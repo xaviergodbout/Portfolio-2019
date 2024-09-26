@@ -1,0 +1,991 @@
+// Archivo BLack - Google Font
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
+// Robto Mono - Google Font
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i&display=swap');
+
+// Mixin for media query
+@mixin for-size($size) {
+    @if $size == phone-only {
+        @media (max-width: 599px) { @content; }
+    } @else if $size == tablet-portrait {
+        @media (max-width: 899px) { @content; }
+    } @else if $size == tablet-landscape {
+        @media (max-width: 1199px) { @content; }
+    } @else if $size == desktop {
+        @media (max-width: 1200px) and (min-wdth: 899px) { @content; }  
+    }
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html{
+    background-color: #000000;
+    body {
+        margin: 0;
+        width: 100vw;
+        overflow-x: hidden;
+        background-color: #FFFFFF;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        *::selection {
+            background: #000000;
+            color: #FFFFFF;
+        }
+        p {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+        // Description Projet
+        .wrapper {
+            width: 90vw;
+            max-width: 1400px;
+            margin: 0 auto 0 auto;
+            position: relative;
+            @include for-size(desktop) {
+                width: 80vw;
+            }
+            .descriptionWrapper {
+                padding: 90px 0 60px 0;;
+                p {
+                    font-family: 'Roboto Mono', monospace;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                    color: #000;
+                    padding-bottom: 20px;
+                    width: 60vw;
+                    max-width: 1200px;
+                    @include for-size(desktop) {
+                        font-size: 0.8rem;
+                    }
+                    @include for-size(phone-only) {
+                        width: 90vw;
+                    }
+                }
+            }
+        }
+        header {
+            div.banner {
+                width: 100%;
+                height: 400px;
+                @include for-size(phone-only) {
+                    height: 300px;
+                }
+                img {
+                    height: 400px;
+                    width: 400px;
+                    position: absolute;
+                    right: 0;
+                    @include for-size(phone-only) {
+                        height: 300px;
+                        width: 300px;
+                    }
+                }
+            }
+            .wrapper {
+                width: 90vw;
+                max-width: 1400px;
+                margin: 100px auto 0 auto;
+                position: relative;
+                @include for-size(desktop) {
+                    width: 80vw;
+                }
+                h1 {
+                    font-family: 'Archivo Black', sans-serif;
+                    font-weight: bold;
+                    font-size: 3rem;
+                    color: #000;
+                    padding-top: 10px;
+                    @include for-size(desktop) {
+                        font-size: 2rem;
+                    }
+                }
+                h2 {
+                    font-family: 'Roboto Mono', monospace;
+                    font-weight: 400;
+                    font-size: 0.8rem;
+                    color: #000;
+                    @include for-size(desktop) {
+                        font-size: 0.6rem;
+                    }
+                }
+                img {
+                    padding: 10px 5px 0 0;
+                    transition: 0.3s cubic-bezier(0, 0, .58, 1);
+                    &:hover{
+                        transform: translateX(-15px);
+                        padding-right: 25px;
+                    }
+                }
+            }
+            nav {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @include for-size(phone-only) {
+                    left: 50px;
+                    padding-bottom: 10px;
+                }
+                li {
+                    display: inline-block;
+                    padding-left: 10px;
+                    &:first-of-type {
+                        padding: 0; 
+                    }
+                }
+                a {
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: 1rem;
+                    color: #000;
+                    transition: 0.2s cubic-bezier(0, 0, .58, 1);
+                    opacity: 0.3;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    @include for-size(desktop) {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            &.work {
+                height: 100vh;
+                padding-bottom: 100px;
+                nav {
+                    padding: 0 0 100px 0;
+                    z-index: 10000;
+                    @include for-size(phone-only) {
+                        padding: 0 0 100px 0;
+                        left: 0;
+                    }
+                    a {
+                        color: #FFFFFF;
+                    }
+                }
+                .wrapper {
+                    height: 95vh;
+                    width: 90vw;
+                    max-width: 1400px;
+                    margin: 0 auto 0 auto;
+                    position: relative;
+                    @include for-size(desktop) {
+                        width: 80vw;
+                    }
+                    .content {
+                        position: absolute;
+                        bottom: 0;
+                        padding: 0 0 100px 0;
+                        z-index: 10000;
+                        & > * {
+                            @include for-size(desktop) {
+                                width: 80vw;
+                                display: block;
+                            }
+                            @include for-size(tablet-landscape) {
+                                width: 90vw;
+                                display: block;
+                            }
+                        }
+                        @include for-size(phone-only) {
+                            padding: 0 0 150px 0;
+                        }
+                        h1 {
+                            font-family: 'Archivo Black', sans-serif;
+                            font-weight: bold;
+                            font-size: 3rem;
+                            color: #FFFFFF;
+                            padding-top: 10px;
+                            @include for-size(desktop) {
+                                font-size: 2.5rem;
+                            }
+                            @include for-size(phone-only) {
+                                font-size: 3.5rem;
+                            }
+                        }
+                        h2 {
+                            font-family: 'Roboto Mono', monospace;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            color: #FFFFFF;
+                            @include for-size(desktop) {
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+                #vignette {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1000;
+                    width: 100vw;
+                    height: 95vh;
+                    background: radial-gradient(transparent, black);
+                    @include for-size(tablet-landscape) {
+                        height: calc(var(--vh, 1vh) * 100);
+                    }
+                }
+                #render {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 95vh;
+                    canvas {
+                        position: absolute;
+                        top: -5vh;
+                        left: 0;
+                        @include for-size(tablet-landscape) {
+                            top: 0;
+                        }
+                    }
+                    @include for-size(tablet-landscape) {
+                        height: calc(var(--vh, 1vh) * 100);
+                    }
+                }
+            }
+            .oldDevice {
+                width: 100vw;
+                height: 95vh;
+                position: absolute;
+                top: 0;
+                z-index: -10000;
+                background: url(../img/oldDevice.jpg) no-repeat;  
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+        }
+        &.work {
+            main > a {
+                display: block;
+                height: 400px;
+                width: 90vw;
+                margin: 0 auto 150px auto;
+                @include for-size(desktop) {
+                    height: 350px;
+                }
+            }
+            section {
+                border-radius: 10px;
+                max-width: 1400px;
+                height: 400px;
+                margin: 0 auto 100px auto;
+                position: relative;
+                box-shadow: 0 1px 3px rgba(85, 85, 85, 0.25), 0 1px 2px rgba(0,0,0,0.12);
+                transition: 0.8s cubic-bezier(.25,.8,.25,1);
+                @include for-size(desktop) {
+                    width: 80vw;
+                    height: 350px;
+                }
+                @include for-size(phone-only) {
+                    height: 90vw;
+                }
+                &:hover {
+                    box-shadow: 0 14px 28px rgba(85, 85, 85, 0.25), 0 10px 10px rgba(0,0,0,0.10);
+                }
+                &:hover .content img {
+                    transform: translateX(15px);
+                }
+                & > img {
+                    position: absolute;
+                    right: 0;
+                    border-radius: 10px;
+                    @include for-size(desktop) {
+                        width: 350px;
+                    }
+                    @include for-size(phone-only) {
+                        width: 90vw;
+                    }
+                }
+                .content {
+                    position: absolute;
+                    bottom: 0;
+                    padding: 0 0 100px 100px;
+                    z-index: 1000;
+                    @include for-size(phone-only) {
+                        padding: 0 0 30px 30px;
+                    }
+                    h1 {
+                        font-family: 'Archivo Black', sans-serif;
+                        font-weight: bold;
+                        font-size: 3rem;
+                        color: #FFFFFF;
+                        padding-top: 10px;
+                        @include for-size(desktop) {
+                            font-size: 2.5rem;
+                        }
+                    }
+                    h2 {
+                        font-family: 'Roboto Mono', monospace;
+                        font-weight: 400;
+                        font-size: 0.8rem;
+                        color: #FFFFFF;
+                    }
+                    img {
+                        padding-top: 10px;
+                        transition: 0.3s cubic-bezier(0, 0, .58, 1);
+                        @include for-size(desktop) {
+                            width: 25px;
+                        }
+                    }
+                    &.invert {
+                        h1 {
+                            color: #000;
+                        }
+                        h2 {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            span {
+                display: block;
+                height: 200px;
+                margin-top: -200px;
+                visibility: hidden;
+            }
+            section.alambic {
+                background-color: #000;
+            }
+            section.webDesign {
+                background-color: #00943A;
+            }
+            section.tendances {
+                background-color: #c9c1c1;
+            }
+            section.covers {
+                background-color: #c23131;
+            }
+            section.bongo {
+                background-color: #FFCC3E;
+            }
+            section.roulette {
+                background-color: #cbcac2;
+            }
+            section.motion {
+                background-color: #1f1f21;
+            }
+            section.logofolio {
+                background-color: #3D75E3;
+            } 
+        }
+        &.project {
+            main {
+                padding-bottom: 60px;
+                .wrapper > img {
+                    width: 100%;
+                    padding-bottom: 60px;
+                }
+                h2 {
+                    font-family: 'Archivo Black', sans-serif;
+                    font-size: 1.5rem;
+                    padding: 120px 0 20px 0;
+                    width: 90vw;
+                    max-width: 1400px;
+                    margin: 0 auto 0 auto;
+                    @include for-size(desktop) {
+                        width: 80vw;
+                    }
+                }
+                & > p {
+                    font-family: 'Roboto Mono', monospace;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 1.2rem;
+                    width: 90vw;
+                    max-width: 1400px;
+                    margin: 0 auto 0 auto;
+                    @include for-size(desktop) {
+                        width: 80vw;
+                    }
+                }
+                & > a {
+                    display: block;
+                    margin: 0 auto 0 auto;
+                    width: 90vw;
+                    max-width: 1400px;
+                    @include for-size(desktop) {
+                        width: 80vw;
+                    }
+                    img {
+                        width: 90vw;
+                        max-width: 1400px;
+                        @include for-size(desktop) {
+                            width: 80vw;
+                        }
+                    }
+                }
+            }
+        }
+        &.alambic {
+            header {
+                div.banner {
+                    background-color: #000000;
+                }
+
+            }
+            main {
+                .wrapper > img:first-of-type {
+                    width: 30% !important;
+                    display: block;
+                    margin: 0 auto 0 auto;
+                }
+            }
+        }
+        &.webDesign {
+            header {
+                div.banner {
+                    background-color: #00943A;
+                }
+
+            }
+            main {
+                section {
+                    width: 100%;
+                    height: 25vw;
+                    max-height: 500px;
+                    color: #FFFFFF;
+                    margin: 220px 0 210px 0;
+                    &:nth-of-type(1) {
+                        margin-top: 120px;
+                        background-color: #00943A;
+                    }
+                    &:nth-of-type(2) {
+                        background-color: #EF4D44;
+                    }
+                    &:nth-of-type(3) {
+                        background-color: #000;
+                    }
+                    @include for-size(tablet-landscape) {
+                        height: 30vw;
+                    }
+                    @include for-size(tablet-portrait) {
+                        height: 400px;
+                    }
+                    @include for-size(phone-only) {
+                        margin: 220px 0 40vw 0;
+                    }
+                    .descriptionWrapper {
+                        width: 35vw;
+                        height: 25vw;
+                        padding: 0 0 20px 0!important;
+                        @include for-size(tablet-portrait) {
+                            width: 60vw;
+                        }
+                        @include for-size(phone-only) {
+                            width: 90vw;
+                        }
+                        p {
+                            font-family: 'Roboto Mono', monospace;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            line-height: 1.4rem;
+                            color: #FFFFFF;
+                            max-width: 700px;
+                        }
+                        a {
+                            font-family: 'Roboto Mono', monospace;
+                            font-weight: 400;
+                            font-size: 1rem;
+                            color: #FFFFFF;
+                            text-decoration: underline;
+                            opacity: 0.6;
+                            transition: 0.3s cubic-bezier(0, 0, .58, 1);
+                            &:hover{
+                                opacity: 1;
+                            }
+                        }
+                        @include for-size(tablet-landscape) {
+                            h2 {
+                                font-size: 1.8rem;
+                            }
+                            p {
+                                max-width: 100%;
+                                font-size: 0.8rem;
+                                line-height: 1.2rem;
+                            }
+                        }
+                    }
+                    img {
+                        width: 30vw !important;
+                        max-width: 650px;
+                        position: absolute;
+                        right: 0;
+                        top: 120px;
+                        padding: 0 !important;
+                        @include for-size(tablet-portrait) {
+                            width: 400px !important;
+                            top: 260px;
+                            left: 0;
+                            right: 0;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        @include for-size(phone-only) {
+                            width: 70vw !important;
+                            top: 300px;
+                        }
+                    }
+                }
+            }
+        }
+        &.tendances {
+            header {
+                div.banner {
+                    background-color: #C9C1C1;
+                }
+            }
+            main {
+                .wrapper > img:first-of-type {
+                    width: 30% !important;
+                    display: block;
+                    margin: 0 auto 0 auto;
+                    @include for-size(phone-only) {
+                        width: 50% !important;
+                    }
+                }
+                a {
+                    width: 50vw;
+                    @include for-size(tablet-landscape) {
+                        width: 90vw;
+                    }
+                    img {
+                        width: 50vw;
+                        @include for-size(tablet-landscape) {
+                            width: 90vw;
+                        }
+                    }
+                }
+            }
+        }
+        &.covers {
+            header {
+                div.banner {
+                    background-color: #C23131;
+                }
+            }
+            main {
+                .content {
+                    text-align: center;
+                    img {
+                        width: calc(90vw / 2);
+                        max-width: calc(1400px / 2);
+                        @include for-size(desktop) {
+                            width: calc(80vw / 2);
+                        }
+                        @include for-size(phone-only) {
+                            width: 90vw;
+                        }
+                    }
+                    h2 {
+                        width: calc(90vw / 2);
+                        max-width: calc(1400px / 2);
+                        font-size: 1.5rem;
+                        padding-top: 0;
+                        @include for-size(desktop) {
+                            width: calc(80vw / 2);
+                            font-size: 1.2rem;
+                        }
+                        @include for-size(phone-only) {
+                            width: 90vw;
+                        }
+                    }
+                    p {
+                        width: calc(90vw / 2);
+                        max-width: calc(1400px / 2);
+                        font-size: 0.8rem;
+                        @include for-size(desktop) {
+                            width: calc(80vw / 2);
+                            font-size: 0.6rem;
+                        }
+                        @include for-size(phone-only) {
+                            width: 90vw;
+                        }
+                        a {
+                            color: #000;
+                            opacity: 0.3;
+                            transition: 0.2s cubic-bezier(0, 0, .58, 1);
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.bongo {
+            header {
+                div.banner {
+                    background-color: #FFCC3E;
+                }
+            }
+            main > p {
+                padding-bottom: 20px;
+            }
+            .apercuLink {
+                @include for-size(tablet-portrait) {
+                    display: none;
+                }
+            }
+        }
+        &.roulette {
+            header {
+                div.banner {
+                    background-color: #cbcac2;
+                }
+            }
+            .wrapper > img:first-of-type {
+                width: 30% !important;
+                display: block;
+                margin: 0 auto 0 auto;
+                @include for-size(phone-only) {
+                    width: 50% !important;
+                }
+            }
+        }
+        &.motion {
+            header {
+                div.banner {
+                    background-color: #1f1f21;
+                }
+            }
+            .wrapper {
+                width: 90vw;
+                max-width: 1400px;
+                @include for-size(desktop) {
+                    width: 80vw;
+                }
+                p {
+                    padding-bottom: 20px;
+                }
+                h2:first-of-type {
+                    padding-top: 60px;
+                }
+                .embed-container { 
+                    position: relative; 
+                    padding-bottom: 56.25%; 
+                    height: 0; 
+                    overflow: hidden; 
+                    max-width: 100%; 
+                    margin-top: 20px;
+                    margin-bottom: 180px;
+                } 
+                .embed-container iframe, .embed-container object, .embed-container embed { 
+                    position: absolute; 
+                    top: 0; 
+                    left: 0;
+                    width: 100%; 
+                    height: 100%; 
+                }
+            }
+
+        }
+        &.logofolio {
+            header {
+                div.banner {
+                    background-color: #3D75E3;
+                }
+            }
+        }
+        &.aboutMe {
+            padding-top: 100px;
+                .pictureWrapper {
+                    height: 90vw;
+                    max-height: 800px;
+                    position: relative;
+                    padding-top: 90px;
+                    @include for-size(phone-only) {
+                        padding-top: 0;
+                    }
+                    img[src="img/me.jpg"] {
+                        width: 90vw;
+                        max-width: 800px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        @include for-size(desktop) {
+                            width: 80vw;
+                        }
+                    }
+                }
+                .descriptionWrapper {
+                    padding: 90px 0 60px 0;
+                    p {
+                        font-family: 'Roboto Mono', monospace;
+                        font-weight: 400;
+                        font-size: 1rem;
+                        line-height: 1.4rem;
+                        color: #000;
+                        padding-bottom: 8px;
+                    }
+                    .contact {
+                        padding-top: 20px;
+                        p {
+                            padding-bottom: 16px;
+                            &:first-of-type {
+                                a:nth-of-type(1) {
+                                    color: #0055FF;
+                                }
+                                a:nth-of-type(2) {
+                                    color: #EA4C89;
+                                }
+                                a:nth-of-type(3) {
+                                    color: #000;
+                                }
+                            }
+                        }
+                        a {
+                            color: #000;
+                            transition: 0.2s cubic-bezier(0, 0, .58, 1);
+                            opacity: 0.4;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+        }
+        //  Grille 2 Colonnes
+        .grid2x {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90vw;
+            max-width: 1400px;
+            margin: 0 auto 0 auto;
+            @include for-size(desktop) {
+                width: 80vw;
+            }
+            .content {
+                width: calc(90vw / 2);
+                max-width: calc(1400px / 2);
+                @include for-size(desktop) {
+                    width: calc(80vw / 2);
+                }
+                h1 {
+                    font-family: 'Archivo Black', sans-serif;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    padding-top: 10px;
+                    @include for-size(desktop) {
+                        font-size: 1.5rem;
+                    }
+                }
+                p {
+                    font-family: 'Roboto Mono', monospace;
+                    color: #000000;
+                    font-size: 0.8rem;
+                    @include for-size(desktop) {
+                        font-size: 0.6rem;
+                    }
+                }
+                @include for-size(phone-only) {
+                    width: 90vw;
+                }
+            }
+            // Previus and Next project
+            .prevProject, .nextProject {
+                width: 50%;
+                transition: 0.6s cubic-bezier(0, 0, .58, 1);
+                opacity: 0.2;
+                @include for-size(tablet-portrait) {
+                    padding-bottom: 60px;
+                }
+                .prevThumb, .nextThumb {
+                    opacity: 0;
+                    transition: 0.4s cubic-bezier(0, 0, .58, 1);
+                    max-width: 180px;
+                    width: 50%;
+                    object-fit: cover;
+                    @include for-size(tablet-portrait) {
+                        display: none;
+                    }
+                }
+                .titre {
+                    width: 50%;
+                    @include for-size(tablet-portrait) {
+                        width: 100%;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: #000000;
+                    width: 100%;
+                    img[src="../img/arrowBlack.svg" ], img[src="../img/arrowBack.svg"] {
+                        transition: 0.3s cubic-bezier(0, 0, .58, 1);
+                        padding-top: 10px;
+                        @include for-size(desktop) {
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+            .prevProject {
+                text-align: left;
+                &:hover {
+                    opacity: 1;
+                    img[src="../img/arrowBack.svg"] {
+                        transform: translateX(-15px);
+                    }
+                    .prevThumb {
+                        opacity: 1;
+                        animation-name: thumbAnimation;
+                        animation-duration: 0.6s;
+                    }
+                }
+            }
+            .nextProject {
+                text-align: right;
+                &:hover {
+                    opacity: 1;
+                    img[src="../img/arrowBlack.svg" ] {
+                        transform: translateX(15px);
+                    }
+                    .nextThumb {
+                        opacity: 1;
+                        animation-name: thumbAnimation;
+                        animation-duration: 0.6s;
+                    }
+                }
+            }
+        }
+
+        @keyframes thumbAnimation {
+            0% {
+                transform: translateY(180px);
+                opacity: 0
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1
+            }
+          }
+
+        footer {
+            height: 400px;
+            background-color: #000;
+            color: #FFFFFF;
+            position: relative;
+            .wrapper {
+                width: 90vw;
+                max-width: 1400px;
+                margin: 0 auto 0 auto;
+                padding-top: 100px;
+                display: flex;
+                @include for-size(desktop) {
+                    width: 80vw;
+                }
+                @include for-size(tablet-portrait) {
+                    flex-direction: column;
+                }
+                nav {
+                    padding-top: 20px;
+                    li {
+                        padding-top: 10px;
+                        &:first-of-type {
+                        padding: 0; 
+                        }
+                    }
+                    a {
+                        font-family: 'Roboto Mono', monospace;
+                        font-size: 1rem;
+                        color: #FFFFFF;
+                        transition: 0.2s cubic-bezier(0, 0, .58, 1);
+                        opacity: 0.3;
+                        @include for-size(desktop) {
+                            font-size: 0.8rem;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+                & > * {
+                    h2 {
+                        font-family: 'Archivo Black', sans-serif;
+                        font-size: 2rem;
+                        cursor: pointer;
+                        padding-top: 10px;
+                        text-decoration: underline;
+                        @include for-size(desktop) {
+                            font-size: 1.5rem;
+                        }
+                        @include for-size(tablet-portrait) {
+                            font-size: 2.5rem;
+                        }
+                        @include for-size(phone-only) {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    p {
+                        font-family: 'Roboto Mono', monospace;
+                        color: #FFFFFF;
+                        font-size: 1.2rem;
+                        padding-top: calc(60px - 16px);
+                        @include for-size(desktop) {
+                            padding-top: calc(40px - 16px);
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+                .col1 {
+                    padding-right: 100px;
+                    img {
+                        @include for-size(desktop) {
+                            height: 40px; 
+                        }
+                    }
+                }      
+            }
+            input {
+                opacity: 0;
+                z-index: -10000;
+            }
+        }
+    }
+}
+
+//  Slider
+.swiper-button-prev,
+.swiper-button-next {
+    @include for-size(phone-only) {
+        display: none;
+    }
+}
+
+//  Loader
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.loader {
+position: fixed;
+z-index: 100000;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.loader > img {
+width: 150px;
+}
+
+.loader.hidden {
+animation: fadeOut 1s;
+animation-fill-mode: forwards;
+}
