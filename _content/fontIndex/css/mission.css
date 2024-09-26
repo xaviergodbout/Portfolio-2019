@@ -1,0 +1,149 @@
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    height: 8vh;
+    display: table;
+    font-family: 'NB Akademie Std', sans-serif;
+    position: relative;
+}
+
+header nav a {
+    float: left;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 3vh;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul li {
+	display: inline-block;
+    padding-right: 2em;
+}
+
+#fixNav {
+    height: 8vh;
+    min-height: 40px;
+	width: 100%;
+	background-color: #F9A23A;
+	text-align: left;
+	position: fixed;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#logoFFI {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 4rem;
+}
+
+#mission{
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    display: table;
+    background-color: #F9A23A;
+    vertical-align: middle;
+    font-family: 'NB Akademie Std', sans-serif;
+    position: relative;
+}
+
+#mission img {
+    float: right;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    margin-top: 10rem;
+    margin-right: 10rem;
+}
+
+#missionContent {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15%;
+}
+
+#mission h1 {
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 700;
+    padding-bottom: 6rem;
+}
+
+#mission p {
+    font-weight: 500;
+    font-size: 2rem;
+    width: 100%;
+    max-width: 36rem;
+}
+
+#mission a {
+    color: rgb(1, 39, 255);
+    text-decoration: underline;
+}
+
+#mission a:visited {
+    color: rgb(1, 39, 255);
+    text-decoration: underline;
+}
+
+footer {
+    height: 30vh;
+    min-height: 400px;
+    width: 100vw;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer nav {
+    font-family: 'NB Akademie Std';
+    font-weight: 400;
+    margin-left: 4rem;
+    text-align: left;
+}
+footer nav a {
+    color: black;
+    text-decoration: none;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+footer nav a:hover {
+    color: black;
+    text-decoration: none;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+#footerLogo {
+    color: black;
+    font-family: 'Monument Extended';
+    text-decoration: underline;
+    text-align: center;
+}
+
+footer p {
+    font-family: 'NB Akademie Std';
+    font-weight: 400;
+    font-size: 0.5rem;
+    margin-left: 4rem;
+    text-align: left;
+}

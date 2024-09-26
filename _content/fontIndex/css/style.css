@@ -1,0 +1,289 @@
+/* Font - Monument Extended */
+@font-face {
+    font-family: 'Monument Extended';
+    src: url('../fonts/MonumentExtended-Regular.woff2') format('woff2'),
+        url('../fonts/MonumentExtended-Regular.woff') format('woff'),
+        url('../fonts/MonumentExtended-Regular.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Font - NB Akademie */
+@font-face {
+    font-family: 'NB Akademie Std';
+    src: url('../fonts/NBAkademieStd-Italic.woff2') format('woff2'),
+        url('../fonts/NBAkademieStd-Italic.woff') format('woff'),
+        url('../fonts/NBAkademieStd-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NB Akademie Std';
+    src: url('../fonts/NBAkademieStd.woff2') format('woff2'),
+        url('../fonts/NBAkademieStd.woff') format('woff'),
+        url('../fonts/NBAkademieStd.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NB Akademie Std';
+    src: url('../fonts/NBAkademieStd-Medium.woff2') format('woff2'),
+        url('../fonts/NBAkademieStd-Medium.woff') format('woff'),
+        url('../fonts/NBAkademieStd-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NB Akademie Std';
+    src: url('../fonts/NBAkademieStd-MediumItalic.woff2') format('woff2'),
+        url('../fonts/NBAkademieStd-MediumItalic.woff') format('woff'),
+        url('../fonts/NBAkademieStd-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NB Akademie Std';
+    src: url('../fonts/NBAkademieStd-BoldItalic.woff2') format('woff2'),
+        url('../fonts/NBAkademieStd-BoldItalic.woff') format('woff'),
+        url('../fonts/NBAkademieStd-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NB Akademie Std';
+    src: url('../fonts/NBAkademieStd-Bold.woff2') format('woff2'),
+        url('../fonts/NBAkademieStd-Bold.woff') format('woff'),
+        url('../fonts/NBAkademieStd-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    display: table;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+    font-family: 'NB Akademie Std', sans-serif;
+    position: relative;
+}
+
+header nav a {
+    float: left;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 3vh;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul li {
+	display: inline-block;
+    padding-right: 2em;
+}
+
+#fixNav {
+    height: 8vh;
+    min-height: 40px;
+	width: 100%;
+	background-color: #ffffff;
+	text-align: left;
+	position: fixed;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#logoFFI {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 4rem;
+}
+
+#ffi_bg {
+    float: right;
+    opacity: 0.3;
+    filter: alpha(opacity=30); 
+    margin-top: 10rem;
+    margin-right: 10rem;
+}
+
+header h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15%;
+}
+
+section {
+    height: 40vh;
+    min-height: 400px;
+    width: 100%;
+    display: table;
+    margin: 0;
+}
+  
+.content {
+    padding-left: 15%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'NB Akademie Std', sans-serif;
+    font-weight: 400;
+} 
+
+.content p a {
+    color: black;
+}
+
+.content p a:visited {
+    color: black;
+}
+
+.floatRight {
+    float: right;
+    margin-right: 15%;
+}
+
+section div div img {
+    margin-left: 78%;
+    margin-top: 20%;
+    margin-bottom: 5px;
+}
+
+.button {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    transition: transform .4s;
+    padding: 10px;
+}
+
+.button:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.button:hover {
+    text-decoration: none;
+    background-color: black;
+    border-color: black;
+}
+
+footer {
+    height: 30vh;
+    min-height: 400px;
+    width: 100vw;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer nav {
+    font-family: 'NB Akademie Std', sans-serif;
+    font-weight: 400;
+    margin-left: 4rem;
+    text-align: left;
+}
+footer nav a {
+    color: black;
+    text-decoration: none;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+footer nav a:hover {
+    color: black;
+    text-decoration: none;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+#footerLogo {
+    color: black;
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+    text-align: center;
+}
+
+footer p {
+    font-family: 'NB Akademie Std', sans-serif;
+    font-weight: 400;
+    font-size: 0.5rem;
+    margin-left: 4rem;
+    text-align: left;
+}
+
+/*  Object Sans  */
+.objectSans {
+    background-color: #FFE500;
+}
+
+.objectSans .content .button:hover {
+    color: #FFE500;
+}
+
+/*  Monarch Display  */
+.monarchDisplay {
+    background-color: #009146;
+}
+
+.monarchDisplay .content .button:hover {
+    color: #009146;
+}
+
+/*  Aganè  */
+.agane {
+    background-color: #F95943;
+}
+
+.agane .content .button:hover {
+    color: #F95943;
+}
+
+/*  Koligö  */
+.koliko {
+    background-color: #F9A23A;
+}
+
+.koliko .content .button:hover {
+    color: #F9A23A;
+}
+
+/*  HK Grotesk  */
+.hkGrotesk {
+    background-color: #0756A4;
+}
+
+.hkGrotesk .content .button:hover {
+    color: #0756A4;
+}
