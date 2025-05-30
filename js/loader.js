@@ -12,7 +12,7 @@ function copyTo() {
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    alert("J'ai téléporter courriel dans votre presse-papier: " + copyText.value);
+    alert("J'ai téléporter mon courriel dans votre presse-papier: " + copyText.value);
 }
 
 
